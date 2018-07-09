@@ -1,0 +1,100 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{title}}</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Arial;
+                padding: 0px;
+                margin: 0px;
+                background: #f1f1f1;
+            }
+
+            a {
+                color: #2A9FD6;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: #1d7097;
+                text-decoration: underline;
+            }
+
+            .header {
+                padding: 30px;
+                text-align: center;
+                background: #1a1a1a;
+                color: white;
+            }
+
+            .small {
+                font-size: smaller;
+            }
+
+            .left {
+                float: left;
+                width: 75%;
+            }
+
+            .right {
+                float: left;
+                width: 25%;
+                padding-left: 20px;
+            }
+
+            .card {
+                background-color: white;
+                padding: 20px;
+                margin-top: 20px;
+            }
+
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            .footer {
+                padding: 20px;
+                text-align: center;
+                background: #1a1a1a;
+                color: white;
+                margin-top: 20px;
+            }
+
+            @media screen and (max-width: 800px) {
+                .left, .right {
+                    width: 100%;
+                    padding: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>{{header}}</h1>
+            <p class="small">{{subheader}}</p>
+        </div>
+
+        <div class="row">
+            <div class="left">
+                {{documentation}}
+            </div>
+
+            <div class="right">
+                <h3>Topics</h3>
+                {{topics}}
+            </div>
+        </div>
+        
+        <div class="footer">
+            <h3>{{footer}}</h3>
+            Documentation generated using <a href="https://github.com/Kedyn/SimpleDocumentation" target="__blank">Simple Documentation</a>.
+        </div>
+    </body>
+</html>
